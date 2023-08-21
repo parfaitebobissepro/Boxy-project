@@ -3,35 +3,31 @@ import {
 } from "@reduxjs/toolkit";
 
 const initialState = [{
-        inputNumber: 1,
+        inputNumber: 0,
         name: "Border radius",
         value: 25,
         type: "range",
-        minMax: [-0, 250],
-        slice: "boxProperties"
+        minMax: [-0, 250]
     },
     {
-        inputNumber: 2,
+        inputNumber: 1,
         name: "Height",
         value: 250,
         type: "range",
-        minMax: [0, 250],
-        slice: "boxProperties",
+        minMax: [0, 250]
     },
     {
-        inputNumber: 3,
+        inputNumber: 2,
         name: "Width",
         value: 250,
         type: "range",
-        minMax: [0, 500],
-        slice: "boxProperties",
+        minMax: [0, 500]
     },
     {
-        inputNumber: 4,
+        inputNumber: 3,
         name: "Background color",
-        value: "fff",
-        type: "color",
-        slice: "boxProperties",
+        value: "#fff",
+        type: "color"
     },
 ];
 
@@ -41,7 +37,7 @@ export const boxSlice = createSlice({
     initialState,
     reducers: {
         updateBoxValue: (state, action) => {
-
+            state.find(el => el.inputNumber === action.payload.inputNumber).value = action.payload.value
         },
     }
 });
