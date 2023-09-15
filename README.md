@@ -2,7 +2,7 @@
 
 This project is a boxshadow generator.
 
-Link to the application: https://takasit.fr/
+Link to the application: https://parfaitebobissepro.github.io/boxy-project/
     
 
 # Screenshots
